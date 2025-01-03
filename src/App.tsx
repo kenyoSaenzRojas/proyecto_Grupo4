@@ -1,11 +1,11 @@
-function App() {
+import { ChakraProvider } from '@chakra-ui/react'
+import AppRouter from './router/AppRouter'
 
-
-  return (
-    <>
-      <h1>Bienvenido al proyecto del Grupo 4</h1>
-    </>
-  )
+const App = () => {
+    return (
+      <ChakraProvider>
+        <AppRouter />
+      </ChakraProvider>
+    )
 }
-
 export default App
