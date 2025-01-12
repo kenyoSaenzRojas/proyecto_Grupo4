@@ -13,7 +13,7 @@ const Navbar = () => {
       <Box as="div" display="flex" justifyContent="space-between" gap="5" color="white" >
         <Menu >
           <Link href="/">Inicio</Link>
-          <Link href='lista'>Lista de Departamentos</Link>
+          <Link href='lista'>Lista de Visitas</Link>
           <Link href="reserva">Reserva</Link>
           {/* -------------- */}
           <Button onClick={onOpen} >Iniciar Session</Button>
