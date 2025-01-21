@@ -13,9 +13,9 @@ const BtnLogout = () => {
 //   }
   return (
     <Box >
-       <Button type="button" marginTop={"50px"} width={"100%"} colorScheme="red" m={'0'} fontFamily={'sans-serif'} backgroundColor={'#37AFE1'}  onClick={async () => {
+       <Button type="submit" w={'220px'} color={'black'}  bgColor={'white'} textAlign={'center'}
+       onClick={async () => {
          await account.deleteSession('current'); setLoggedInUser(true); navigate('/') }} >  
-              {/* <Link href='/'>Cerrar Session </Link>   */}
               Cerrar Session
         </Button>
         

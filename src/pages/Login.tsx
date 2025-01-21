@@ -8,13 +8,14 @@ const Login = () => {
 
 
   return (
-    <div>
+    // bgImage={'../../public/BackgroungInicio10.jpg'} bgPosition={'bottom'} bgRepeat={'no-repeat'} bgSize={'cover'}
+    <Box as="div" bgColor={'#f8f3f6'}>
       <Navbar/>
-      <Box as="h1"textDecoration={'underline'}  marginTop={"20px"} marginBottom={"20px"} fontFamily={"sans-serif"} textAlign={"center"} fontWeight={"900"} color={"#3FA7C0"}  fontSize={"30px"} >
-          Areas Comunes
-        </Box>
+      <Box as="h1"  pt={"100px"} textAlign={"center"}  >
+          {/* Areas Comunes */}
+      </Box>
       <Inicio/>
-    </div>
+    </Box>
   );
 };
 

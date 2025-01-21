@@ -1,12 +1,13 @@
-import Navbar from "../shared/components/Navbar"
+
+import NavBarUser from "../shared/components/NavBarUser"
 
 
 const PerfilUser = () => {
+
   return (
     <div>
-        <Navbar/>
-        Perfil de usuarios
-      
+        <NavBarUser/>
+         Perfil de usuarios: cada usuario puede ver su perfil
     </div>
   )
 }

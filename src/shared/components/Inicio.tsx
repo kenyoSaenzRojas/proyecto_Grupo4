@@ -39,8 +39,8 @@ export default function Carousel() {
   ]
 
   return (
-    <Box as='div' display={'flex'} justifyContent={'center'} alignItems={'center'} >
-        <Box position={'relative'} height={'500px'} width={'60%'} textAlign={'center'} overflow={'hidden'} borderRadius={'10px'}>
+    <Box as='div' display={'flex'} justifyContent={'center'} alignItems={'center'} pb={'87px'}>
+        <Box position={'relative'} height={'500px'} width={'50%'} textAlign={'center'} overflow={'hidden'} borderRadius={'20px'}>
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"

@@ -1,10 +1,11 @@
-import Navbar from "../shared/components/Navbar"
+
+import NavBarUser from "../shared/components/NavBarUser"
 
 const ListaDepartamento = () => {
   return (
     <div>
-        <Navbar/>
-      Esta es la lista de departamentos
+        <NavBarUser/>
+        Esta es la lista de reservas: solo puede ver el Vigilante
     </div>
   )
 }
