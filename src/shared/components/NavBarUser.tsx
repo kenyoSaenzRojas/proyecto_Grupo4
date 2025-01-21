@@ -11,7 +11,7 @@ import BtnLogout from "./BtnLogout";
 
 const NavBarUser = () => {
 
-    const { isOpen,onOpen, onClose } = useDisclosure();
+    const { isOpen, onClose } = useDisclosure();
    
   return (
     // #010101  #151617  hover #213555

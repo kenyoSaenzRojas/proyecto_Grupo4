@@ -12,10 +12,6 @@ const Formulario = () => {
   const [password, setPassword] = useState('');
   //const [name, setName] = useState('');
 
-// console.log(loggedInUser);
-// console.log(email);
-// console.log(password);
-
  const navigate = useNavigate();
 
 
@@ -24,7 +20,7 @@ const Formulario = () => {
     setLoggedInUser(await account.get());
     navigate('/perfil');
 
-    if (email=="vigilante@dg4.com") {
+    if (email=="vigilante@dg4.com" || email=="vigilante1@dg4.com" ) {
       navigate('/lista');
     }
     <Spinner color="#000" size={'md'} />
