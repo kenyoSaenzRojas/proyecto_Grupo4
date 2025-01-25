@@ -1,9 +1,8 @@
 import { Box, Button, Flex, FormControl, FormErrorMessage, FormLabel, Heading, Image, Input, Spinner, Stack, useToast } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { database, storage } from "../shared/lib/appwrite";
+import { storage } from "../shared/lib/appwrite";
 import { Appwrite } from "../shared/lib/env";
-import { FaUserCircle } from "react-icons/fa";
 
 
 const Propietario = () => {
@@ -18,7 +17,7 @@ const Propietario = () => {
   const [error, setError] = useState(false);
 
   const obtenerFoto=async()=>{
-    const fotoid=storage.getFilePreview(Appwrite.buckets.departamentosimg,'67955c730012a9c3d398')
+    const fotoid=storage.getFilePreview(Appwrite.buckets.departamentosimg,'679567600008da99bbdf')
     setFoto(fotoid)
 }
 
