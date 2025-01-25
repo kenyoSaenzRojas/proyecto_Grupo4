@@ -6,6 +6,8 @@ import Navbar from "../shared/components/Navbar"
 import { format } from "date-fns"
 import { database, storage } from "../shared/lib/appwrite"
 import { Appwrite } from "../shared/lib/env"
+import NavBarUser from "../shared/components/NavBarUser"
+import { FaLongArrowAltLeft } from "react-icons/fa"
 
 const DetalleVisita = () => {
     const toast=useToast()
@@ -45,14 +47,20 @@ const DetalleVisita = () => {
           })
         console.log('Finalizar visita')
     }
+    const atras=async()=>{
+        
+        navigate("/lista")
+    }
 
     const fecha=visita?.Fecha_ing? format(new Date(visita?.Fecha_ing),'dd/MM/yyyy'):'Fecha no Disponible'
     const hora=visita?.Hora_ing? format(new Date(visita?.Hora_ing),'HH:mm:ss'):'Hora no Disponible'
   return (
     <div>
       <>
-        <Navbar/>
-        <Heading textAlign='center' paddingTop='20px'>{`VISITA DEPARTAMENTO ${visita?.Departamento}`}</Heading>
+        <NavBarUser/>
+        <Heading textAlign='center' paddingTop='20px' > 
+            <Button marginRight={'50px'} alignItems={'center'} colorScheme='teal' size='sm' onClick={atras}> <FaLongArrowAltLeft /></Button>
+            {`VISITA DEPARTAMENTO ${visita?.Departamento}`}</Heading>
         <Grid templateColumns='repeat(2, 1fr)' gap={6} p={10} >
             <GridItem w='100%' h='10'  border='1px solid blue'>
                 {foto?(
@@ -72,9 +80,11 @@ const DetalleVisita = () => {
                     <Textarea readOnly value={visita?.Comentario} size='sm' border="1px solid"/>
                 </Stack>
                 <Flex justify='center' mt={4}>
+                    
                     <Button colorScheme='teal' size='md' onClick={finalizarVisita}>
                         Finalizar Visita
                     </Button>
+                    
                 </Flex>
             </GridItem>
         </Grid>
