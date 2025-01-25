@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { storage } from "../shared/lib/appwrite";
 import { Appwrite } from "../shared/lib/env";
+import NavBarUser from "../shared/components/NavBarUser";
 
 
 const Propietario = () => {
@@ -70,9 +71,8 @@ const [loading, setLoading] = useState(false); // Para mostrar el estado de carg
     },[])
 
   return (
-
-  
-
+    <>
+    <NavBarUser/>
 <Flex 
       direction={{ base: 'column', md: 'row' }}  // En pantallas pequeñas será columna, en grandes será fila
       align="stretch"  // Asegura que ambos (formulario e imagen) tengan la misma altura
@@ -176,7 +176,7 @@ const [loading, setLoading] = useState(false); // Para mostrar el estado de carg
     </Flex>
 
    
-
+    </>
    
   )
 

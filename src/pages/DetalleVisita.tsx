@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { Visitas } from "../shared/declaraciones/database"
 import { Button, Flex, Grid, GridItem, Heading, Image, Stack, Textarea, useToast } from "@chakra-ui/react"
-import Navbar from "../shared/components/Navbar"
 import { format } from "date-fns"
 import { database, storage } from "../shared/lib/appwrite"
 import { Appwrite } from "../shared/lib/env"
+import NavBarUser from "../shared/components/NavBarUser"
 
 const DetalleVisita = () => {
     const toast=useToast()
@@ -51,7 +51,7 @@ const DetalleVisita = () => {
   return (
     <div>
       <>
-        <Navbar/>
+        <NavBarUser/>
         <Heading textAlign='center' paddingTop='20px'>{`VISITA DEPARTAMENTO ${visita?.Departamento}`}</Heading>
         <Grid templateColumns='repeat(2, 1fr)' gap={6} p={10} >
             <GridItem w='100%' h='10'  border='1px solid blue'>
