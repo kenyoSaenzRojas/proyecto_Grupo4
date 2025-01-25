@@ -1,9 +1,10 @@
-import Navbar from "../shared/components/Navbar"
+
+import NavBarUser from "../shared/components/NavBarUser"
 
 const Citas = () => {
   return (
     <div>
-      <Navbar/>
+      <NavBarUser/>
       Las reservas....
     </div>
   )
